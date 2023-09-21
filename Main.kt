@@ -39,10 +39,10 @@ fun adicionarNumeros(): Set<Int> {
 }
 
 fun lerNumero(): Int {
-    var entrada = readLine()?.toIntOrNull()
+    var entrada = readlnOrNull()?.toIntOrNull()
     while (entrada == null) {
         println("Número invalido! tente novamente")
-        entrada = readLine()?.toIntOrNull()
+        entrada = readlnOrNull()?.toIntOrNull()
     }
     return entrada
 }
