@@ -21,14 +21,13 @@ fun selecionarProduto() {
         val escolha = readlnOrNull()?.toIntOrNull()
 
         when (escolha) {
-            1 -> adiconarProduto(carrinho)
-            2 -> removerProdto(carrinho)
+            1 -> adicionarProduto(carrinho)
+            2 -> removerProduto(carrinho)
             3 -> listarProduto(carrinho)
             4 -> {
                 println("Programa encerrado.")
                 return
             }
-
             else -> {
                 println("Nome invalido. Tente novamente.")
             }
@@ -36,14 +35,14 @@ fun selecionarProduto() {
     }
 }
 
-fun adiconarProduto(carrinho: MutableSet<String>) {
+fun adicionarProduto(carrinho: MutableSet<String>) {
     print("Digite o nome do produto a ser adicionado: ")
     val produto = lerProduto()
     carrinho.add(produto)
     println("'$produto' foi adicionado ao carrinho.")
 }
 
-fun removerProdto(carrinho: MutableSet<String>) {
+fun removerProduto(carrinho: MutableSet<String>) {
     print("Digite o nome do produto a ser removido: ")
     val produto = lerProduto()
     if (produto.isNotEmpty() && carrinho.remove(produto)) {
