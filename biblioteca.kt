@@ -6,7 +6,6 @@ fun selecionarLivros() {
 
     println("Bem-vindo à biblioteca virtual!")
     println("Você pode adicionar, remover, listar e pesquisar livros na biblioteca.")
-
     val biblioteca = mutableSetOf<String>()
     while (true) {
         println(
@@ -17,6 +16,7 @@ fun selecionarLivros() {
                     "4. Pesquisar livro na biblioteca\n" +
                     "5. Sair do programa"
         )
+
         println("Escolha uma opção:")
         val opcao = readlnOrNull()?.toIntOrNull()
         when (opcao) {
@@ -75,7 +75,7 @@ fun pesquisarLivros(biblioteca: MutableSet<String>) {
     val pesiquese = lerLivros()
     if (pesiquese.isNotEmpty() && pesiquese in biblioteca) {
         println("$pesiquese está disponível na biblioteca.")
-    }else{
+    } else {
         println("$pesiquese não foi encontrado na biblioteca!")
     }
 }

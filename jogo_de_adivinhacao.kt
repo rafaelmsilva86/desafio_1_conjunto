@@ -44,7 +44,7 @@ fun escolherPalpites() {
                         println(
                             "Números de tentativas esgotadas.\n" +
                                     " O número era $numerosAleatorios.\n" +
-                                    "Por favor, reinicie o jogo para jogar novamente."
+                                    "Tente adivinhar novamente se for capaz!."
                         )
                     }
                 }

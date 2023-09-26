@@ -29,7 +29,7 @@ fun selecionarProduto() {
                 return
             }
             else -> {
-                println("Nome invalido. Tente novamente.")
+                println("Escolha invalida. Tente novamente.")
             }
         }
     }
