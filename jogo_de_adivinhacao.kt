@@ -25,20 +25,18 @@ fun main() {
                     val limiteTentativas = 3
                     println("Números de tentativas: $tentativas de $limiteTentativas")
 
-                    val dica = if (tentativas == 3) "Maior" else "Menor"
+                    val dica = if (tentativas == limiteTentativas) "Maior" else "Menor"
                     println("Dica: o número é $dica que o seu palpite, $palpite")
 
-                    if (tentativas == limiteTentativas){
-                        println("Números de tentativas esgotadas. O número era $numerosAleatorios.\n" +
-                                "Por favor, reinicie o jogo para jogar novamente.")
+                    if (tentativas == limiteTentativas) {
+                        println(
+                            "Números de tentativas esgotadas. O número era $numerosAleatorios.\n" +
+                                    "Por favor, reinicie o jogo para jogar novamente."
+                        )
                     }
-
-
-
                 }
             }
         }
-
     }
 
 
